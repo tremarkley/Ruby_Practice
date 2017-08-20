@@ -1,10 +1,12 @@
 enteredWords = []
 loop do 
   response = gets.chomp
-  if !response.blank?
+  if response != ""
     enteredWords.push response
   end
-  break if response.blank?
+  break if response == ""
 end
+enteredWords = enteredWords.sort
 
-enteredWords.sort
+puts "Entered Words: "
+puts enteredWords 
